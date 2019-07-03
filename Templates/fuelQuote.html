@@ -10,7 +10,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../Static/fuelQuote.css">
     <script src="java.js"></script>
-    <link href="profile.html">
+    <link rel="import" href="profile.html">
 
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
@@ -62,33 +62,38 @@
                 id="gallons_req" name="gallons" placeholder="10" required="required">
         </div>
 
+        <!--Script below doesn't do anything-->
+        <script>
+            var x, y, name;
+            x = document.getElementById("form-group1");
+            y = x.elements["name"].value;
+            document.getElementById("street1_id").innerHTML = y;
+        </script>
+
+
         <div class="form-group">
             <!-- Delivery Address -->
-            <label for="street1_id" class="control-label">Delivery Address</label>
-            <input type="text" pattern=".{,100}" class="form-control"
-                id="street1_id"  name="delivery" value = "display client's address from profile" readonly >
+            <label for="delivery_id" class="control-label">Delivery Address</label>
+            <input type="text" pattern=".{,100}" class="form-control" id="delivery_id" name="delivery"
+                value="display client's address from profile" readonly>
         </div>
 
-        <!-- <div class="form-group"> 
-                <label for="street2_id" class="control-label">Delivery Date</label>
-                <input type="text" pattern=".{,100}" title="100 characters maximum"
-                class="form-control" id="street2_id" name="street2" placeholder="June 5th"required="required">
-            </div>	 -->
 
-            <div class="form-group">
-                    <label for="date-picker-example">Delivery Date</label>
-                <div class='input-group date' id='datepicker'>
-                    <input type='text'input placeholder="Selected date" class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
+
+        <div class="form-group">
+            <label for="date-picker-example">Delivery Date</label>
+            <div class='input-group date' id='datepicker'>
+                <input type='text' input placeholder="Selected date" class="form-control" required="required" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
             </div>
-      
+        </div>
+
 
         <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
-     <script>
+        <script>
             $(function () {
                 $('#datepicker').datepicker({
                     format: "dd/mm/yyyy",
@@ -102,13 +107,13 @@
                     orientation: "button"
                 });
             });
-        </script> 
+        </script>
 
 
         <div class="form-group">
-          <!-- Price Suggestion-->
+            <!-- Price Suggestion-->
             <label for="sug_price" class="control-label">Suggested Price</label>
-            <input type="text" pattern=".{,100}" required title="100 characters maximum" class="form-control"
+            <input type="number" pattern=".{,100}" required title="100 characters maximum" class="form-control"
                 id="sug_price" name="price" placeholder="$999" readonly>
         </div>
 
@@ -116,8 +121,8 @@
         <div class="form-group">
             <!-- Total Price-->
             <label for="total_price" class="control-label">Total Amount</label>
-            <input type="text" pattern=".{5,9}" required title="5 to 9 characters" class="form-control" id="total_price"
-                name="totPrice" placeholder="$999" readonly>
+            <input type="number" pattern=".{5,9}" required title="5 to 9 characters" class="form-control"
+                id="total_price" name="totPrice" placeholder="$999" readonly>
         </div>
 
         <div class="form-group">
