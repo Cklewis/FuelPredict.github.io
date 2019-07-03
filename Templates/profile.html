@@ -65,7 +65,7 @@
             <!-- Street 2 -->
             <label for="street2_id" class="control-label">Street Address 2</label>
             <input type="text" pattern=".{,100}" title="100 characters maximum" class="form-control" id="street2_id"
-                name="street2" placeholder="Apartment, suite, unit, building, floor, etc." required="required">
+                name="street2" placeholder="Apartment, suite, unit, building, floor, etc. (Optional)">
         </div>
 
         <div class="form-group">
@@ -136,8 +136,8 @@
         <div class="form-group">
             <!-- Zip Code-->
             <label for="zip_id" class="control-label">Zip Code</label>
-            <input type="number" pattern=".{5,9}" required title="5 to 9 characters" class="form-control" id="zip_id"
-                name="zip" placeholder="#####" required="required">
+            <input type="number" min="5" max"9" size=10 required title="5 to 9 characters" class="form-control" id="zip_id"
+                name="zip" placeholder="#####" required="true"/>
         </div>
 
         <div class="form-group">
