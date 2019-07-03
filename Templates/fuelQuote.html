@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../Static/fuelQuote.css">
-    <script src="/Javascript/java.js"></script>
+    <script src="java.js"></script>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
+        rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
 </head>
 
 <body>
@@ -55,8 +65,7 @@
             <!-- Street 1 -->
             <label for="street1_id" class="control-label">Delivery Address</label>
             <input type="text" pattern=".{,100}" required title="100 characters maximum" class="form-control"
-                id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o"
-                required="required">
+                id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o">
         </div>
 
         <!-- <div class="form-group"> 
@@ -65,13 +74,40 @@
                 class="form-control" id="street2_id" name="street2" placeholder="June 5th"required="required">
             </div>	 -->
 
+            <div class="form-group">
+                    <label for="date-picker-example">Delivery Date</label>
+                <div class='input-group date' id='datepicker'>
+                    <input type='text'input placeholder="Selected date" class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+      
 
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+     <script>
+            $(function () {
+                $('#datepicker').datepicker({
+                    format: "dd/mm/yyyy",
+                    autoclose: true,
+                    todayHighlight: true,
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    autoclose: true,
+                    changeMonth: true,
+                    changeYear: true,
+                    orientation: "button"
+                });
+            });
+        </script> 
 
-        <div class="md-form">
+      <!--   <div class="md-form">
             <label for="date-picker-example">Delivery Date</label>
             <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker">
 
-        </div>
+        </div> -->
 
         <div class="form-group">
             <!-- City-->
