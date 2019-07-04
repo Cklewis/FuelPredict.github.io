@@ -12,6 +12,13 @@
 
     <link rel="import" href="profile.html">
 
+    <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("profile.html"); 
+    });
+    </script> 
+
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
         rel="stylesheet" id="bootstrap-css">
@@ -66,12 +73,12 @@
         <div class="form-group">
             <!-- Delivery Address -->
             <label for="delivery_id" class="control-label">Delivery Address</label>
-            <input type="text" pattern=".{,100}" class="form-control" name="delivery" id="outputAddress"
-                placeholder="street1" readonly>
+            <input type="text" pattern=".{,100}" class="form-control" name="delivery" 
+                placeholder="client's previously entered address" readonly>
 
                 <!--Feel free to erase this below. Was testing-->
-            <p>your address is <span id="outputAddress">__</span></p>
-            
+            <p id ="demo"></p>
+
         </div>
 
 
