@@ -1,3 +1,4 @@
+//Doesn't really work
 var submit = document.getElementById("form");
 submit.onclick = function(){
     var address = document.getElementById("street1_id").value;
