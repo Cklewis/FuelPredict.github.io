@@ -12,13 +12,6 @@
 
     <link rel="import" href="profile.html">
 
-    <script src="jquery.js"></script> 
-    <script> 
-    $(function(){
-      $("#includedContent").load("profile.html"); 
-    });
-    </script> 
-
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
         rel="stylesheet" id="bootstrap-css">
@@ -74,10 +67,10 @@
             <!-- Delivery Address -->
             <label for="delivery_id" class="control-label">Delivery Address</label>
             <input type="text" pattern=".{,100}" class="form-control" name="delivery" 
-                placeholder="client's previously entered address" readonly>
+                placeholder="delivery_id" id=delivery_id readonly>
 
                 <!--Feel free to erase this below. Was testing-->
-            <p id ="demo"></p>
+            <p id ="delivery_id">Testing to see if this changes to input address</p>
 
         </div>
 
