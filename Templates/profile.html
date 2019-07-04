@@ -45,7 +45,7 @@
         crossorigin="anonymous"></script>
 
 
-    <form action="fuelQuote.html" method="get">
+    <form action="fuelQuote.html" method="GET">
         <div class="form-group">
             <!-- Full Name -->
             <label for="full_name_id" class="control-label">Full Name</label>
@@ -136,17 +136,19 @@
         <div class="form-group">
             <!-- Zip Code-->
             <label for="zip_id" class="control-label">Zip Code</label>
-            <input type="number" min="5" max"9" size=10 required title="5 to 9 characters" class="form-control" id="zip_id"
+            <input type="text" minlength="5" maxlength"9" size=10 required title="5 to 9 characters" class="form-control" id="zip_id"
                 name="zip" placeholder="#####" required="true"/>
         </div>
 
         <div class="form-group">
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary">Get My Quote!</button>
+            <button id="submit" class="btn btn-primary">Get My Quote!</button>
         </div>
 
     </form>
 
 </body>
-
+<footer>
+    <script src="../Javascript/java.js"></script>
+</footer>
 </html>

@@ -9,12 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../Static/fuelQuote.css">
-    <script src="java.js"></script>
+   
     <link rel="import" href="profile.html">
 
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
-        id="bootstrap-css">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
         rel="stylesheet" id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -62,20 +60,15 @@
                 id="gallons_req" name="gallons" placeholder="10" required="required">
         </div>
 
-        <!--Script below doesn't do anything-->
-        <script>
-            var x, y, name;
-            x = document.getElementById("form-group1");
-            y = x.elements["name"].value;
-            document.getElementById("street1_id").innerHTML = y;
-        </script>
 
 
         <div class="form-group">
             <!-- Delivery Address -->
             <label for="delivery_id" class="control-label">Delivery Address</label>
-            <input type="text" pattern=".{,100}" class="form-control" id="delivery_id" name="delivery"
-                value="display client's address from profile" readonly>
+            <input type="text" pattern=".{,100}" class="form-control" id="outputAddress" name="delivery"
+                placeholder="street1" readonly>
+
+               
         </div>
 
 
@@ -132,6 +125,12 @@
 
     </form>
 
+    
+
 </body>
 
+
+<footer>
+<script src="/Javascript/java.js"></script>
+</footer>
 </html>
