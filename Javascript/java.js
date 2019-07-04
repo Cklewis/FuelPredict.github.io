@@ -1,13 +1,7 @@
-$(function () {
-    $('#datepicker').datepicker({
-        format: "dd/mm/yyyy",
-        autoclose: true,
-        todayHighlight: true,
-        showOtherMonths: true,
-        selectOtherMonths: true,
-        autoclose: true,
-        changeMonth: true,
-        changeYear: true,
-        orientation: "button"
-    });
-});
+//Doesn't really work
+var submit = document.getElementById("form");
+submit.onclick = function(){
+    var address = document.getElementById("street1_id").value;
+    document.getElementById("outputAddress").innerText = address;
+    alert("outputAddress")
+}
