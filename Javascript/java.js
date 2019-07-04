@@ -5,9 +5,11 @@ submit.onclick = function(){
     alert("outputAddress");
 }
 
+function search() {
 
-function search(ele) {
-    if(event.key === 'Enter') {
-        alert(ele.value);        
-    }
+    var address = document.getElementById("street1_id").value;
+    alert(address);
+    document.getElementById("demo").innerHTML= address;
+
+
 }

@@ -87,24 +87,40 @@
    <div class="container">     
     <div class="table-responsive">          
     <table class="table">
-      <thead>
+      <thead class="thead-light">
         <tr>
-          <th>#</th>
-          <th>Gallons</th>
-          <th>Delivery Address</th>
-          <th>Delivery Date</th>
-          <th>Suggested Price</th>
-          <th>Total Amount Due</th>
+          <th scope="col">#</th>
+          <th scope="col">Gallons</th>
+          <th scope="col">Delivery Address</th>
+          <th scope="col">Delivery Date</th>
+          <th scope="col">Suggested Price</th>
+          <th scope="col">Total Amount Due</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
+          <th scope="row">1</th>
           <td>10</td>
-          <td>1793 McHard Rd</td>
-          <td>10/25/19</td>
+          <td>1793 McHard Rd Huntsville, AL 12345</td>
+          <td>10/25/2019</td>
           <td>$999</td>
-          <td>$999</td>
+          <td>$9999</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>20</td>
+          <td>123 Main St Joplin, MO 56789</td>
+          <td>09/01/2019</td>
+          <td>$600</td>
+          <td>$12000</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>15</td>
+          <td>456 MLK St Atlanta, GA 30356</td>
+          <td>11/01/2019</td>
+          <td>$400</td>
+          <td>$6000</td>
         </tr>
       </tbody>
     </table>
