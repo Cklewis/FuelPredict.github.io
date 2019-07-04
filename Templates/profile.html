@@ -45,12 +45,12 @@
         crossorigin="anonymous"></script>
 
 
-    <form id = "form" action="fuelQuote.html" method="GET">
+    <form id="form" action="fuelQuote.html" method="GET">
         <div class="form-group">
             <!-- Full Name -->
             <label for="full_name_id" class="control-label">Full Name</label>
             <input type="text" pattern=".{1,50}" required title="50 characters maximum" class="form-control"
-                id="full_name_id" name="full_name" placeholder="John Deer" required="required"/>
+                id="full_name_id" name="full_name" placeholder="John Deer" required="required" />
         </div>
 
         <div class="form-group">
@@ -58,21 +58,21 @@
             <label for="street1_id" class="control-label">Street Address 1</label>
             <input type="text" pattern=".{1,100}" required title="100 characters maximum" class="form-control"
                 id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o"
-                required="required"/>              
+                required="required" onkeydown="search(this)" />
         </div>
 
         <div class="form-group">
             <!-- Street 2 -->
             <label for="street2_id" class="control-label">Street Address 2</label>
             <input type="text" pattern=".{1,100}" title="100 characters maximum" class="form-control" id="street2_id"
-                name="street2" placeholder="Apartment, suite, unit, building, floor, etc. (Optional)"/>
+                name="street2" placeholder="Apartment, suite, unit, building, floor, etc. (Optional)" />
         </div>
 
         <div class="form-group">
             <!-- City-->
             <label for="city_id" class="control-label">City</label>
             <input type="text" pattern=".{1,100}" required title="100 characters maximum" class="form-control"
-                id="city_id" name="city" placeholder="Smallville" required="required"/>
+                id="city_id" name="city" placeholder="Smallville" required="required" />
         </div>
 
         <div class="form-group">
@@ -136,22 +136,25 @@
         <div class="form-group">
             <!-- Zip Code-->
             <label for="zip_id" class="control-label">Zip Code</label>
-            <input type="text" minlength="5" maxlength"9" size=10 required title="5 to 9 characters" class="form-control" id="zip_id"
-                name="zip" placeholder="#####" required="true"/>
+            <input type="text" minlength="5" maxlength"9" size=10 required title="5 to 9 characters"
+                class="form-control" id="zip_id" name="zip" placeholder="#####" required="true" />
 
-           <!--  <input type="number" pattern=".{5,9}" required title="5 to 9 characters" class="form-control" id="zip_id"
+            <!--  <input type="number" pattern=".{5,9}" required title="5 to 9 characters" class="form-control" id="zip_id"
                 name="zip" placeholder="#####" required="required" /> -->
         </div>
 
         <div class="form-group">
             <!-- Submit Button -->
             <button id="submit" class="btn btn-primary">Get My Quote!</button>
+            <!-- <input type="button" class="btn btn-primary" value="Get My Quote!" onclick="writeAddress();"/> -->
         </div>
 
     </form>
 
 </body>
+
 <footer>
-    <script src="../Javascript/java.js"></script>
+    <script src="/Javascript/java.js"></script>
 </footer>
+
 </html>
