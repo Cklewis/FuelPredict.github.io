@@ -18,3 +18,4 @@ function delivered(){
     document.getElementById("demo").innerHTML= delivery;
     console.log(delivery);
 }
+
