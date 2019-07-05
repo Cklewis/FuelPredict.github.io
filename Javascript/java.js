@@ -14,6 +14,7 @@ function search() {
 
 //On gallon field Click run this function from fuelquote
 function delivered(){
+
     var delivery = localStorage.getItem('street1_id').value;
     document.getElementById("demo").innerHTML= delivery;
     console.log(delivery);
