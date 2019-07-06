@@ -12,6 +12,6 @@ body {
     text-align: center;
 }
 
-.signout{
-    float:right; 
+.nav-item{
+    color:rgb(185, 181, 181);
 }

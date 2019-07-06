@@ -8,3 +8,12 @@ body {
     margin-right: 25%;
     margin-top:2%;
 }
+
+.nav-item{
+  color:rgb(185, 181, 181);
+}
+
+header{
+  text-align:center;
+  font-family: Times, "Times New Roman", serif;
+}
