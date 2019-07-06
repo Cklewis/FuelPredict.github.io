@@ -20,3 +20,20 @@ function delivered(){
     console.log(delivery);
 }
 
+var firebaseConfig = {
+  apiKey: "api-key",
+  authDomain: "project-id.firebaseapp.com",
+  databaseURL: "https://project-id.firebaseio.com",
+  projectId: "project-id",
+  storageBucket: "project-id.appspot.com",
+  messagingSenderId: "sender-id",
+  appID: "app-id",
+};
+
+firebase.initializeApp(config);
+
+var ref = firebase.database().ref();                           
+ref.on("value", function(snapshot){
+  output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
+});
+
