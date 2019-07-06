@@ -1,4 +1,3 @@
-@ -1,11 +0,0 @@
 # FuelPredict.github.io
 Making fuel prediction front-end
 Description: 
