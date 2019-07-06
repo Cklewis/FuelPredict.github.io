@@ -11,3 +11,7 @@ body {
 .back {
     text-align: center;
 }
+
+.signout{
+    float:right; 
+}
