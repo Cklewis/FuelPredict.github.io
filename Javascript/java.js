@@ -20,6 +20,10 @@ function delivered(){
     console.log(delivery);
 }
 
+function goBack() {
+  window.history.back()
+}
+
 var firebaseConfig = {
   apiKey: "api-key",
   authDomain: "project-id.firebaseapp.com",
