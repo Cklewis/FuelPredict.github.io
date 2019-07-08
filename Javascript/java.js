@@ -20,9 +20,13 @@ function delivered(){
     console.log(delivery);
 }
 
-function goBack() {
+/* function goBack() {
   window.history.back()
-}
+} */
+
+/* document.getElementById("myButton").onclick = function () {
+  location.href = "profile.html";
+}; */
 
 var firebaseConfig = {
   apiKey: "api-key",
