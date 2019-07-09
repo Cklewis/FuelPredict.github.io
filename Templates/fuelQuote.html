@@ -10,31 +10,38 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../Static/fuelQuote.css">
 
-    <link href="profile.html" rel="import" />
-  
+
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
         rel="stylesheet" id="bootstrap-css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
 
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/6.2.4/firebase-app.js"></script>
+    <!-- <script src="/__/firebase/6.2.4/firebase-app.js"></script> -->
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#reserved-urls -->
 
     <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
+    <!-- <script src="/__/firebase/init.js"></script> -->
 
-
+    <!--Navbar-->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <a href="#" class="navbar-brand">Fuel Rate Prediction</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
@@ -42,10 +49,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="#" class="nav-link">Fuel Quote</a>
-                    <!-- Fuel Quote -->
-                </li>
+                   
+                </li> -->
                 <!--   <li class="nav-item">
                             <a href="profile.html" class="nav-link">Client Profile Management</a>
                         </li> -->
@@ -66,24 +73,14 @@
         </div>
 
     </nav>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-    <!--   <header>
-                <br>
-                <h2>Fuel Quote</h2>
-                <hr class="new5">
-        </header> -->
+    <!--End Navbar-->
 
 
 
+    <header>
+        <br>
+        <h2>Fuel Quote</h2>
+    </header>
 
 
     <form action="fqHistory.html" method="get">
@@ -162,8 +159,8 @@
 
     </form>
 
-    
-   <!--  <div class="back">
+
+    <!--  <div class="back">
         <a href="profile.html"><button type="submit" class="btn btn-primary">Back to profile</button> </a>
     </div> -->
 
@@ -171,7 +168,7 @@
 
 
 <footer>
-    <script src="/Javascript/java.js"></script>
+    <script src="/Javascript/profile.js"></script>
     <script src="/Javascript/fuelQuote.js"></script>
 </footer>
 
