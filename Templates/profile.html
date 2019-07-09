@@ -159,7 +159,7 @@
         <div class="form-group">
             <!-- Zip Code-->
             <label for="zip_id" class="control-label">Zip Code</label>
-            <input type="text" pattern="\d*" minlength="5" maxlength="9" size=10 required title="5 to 9 characters(Numerical characters only)"
+            <input type="text" pattern="\d*" minlength="5" maxlength="9" size=10 required title="5 to 9 characters (Numerical characters only)"
                 class="form-control" id="zip_id" name="zip" placeholder="#####" required="true" />
 
             <!--  <input type="number" pattern=".{5,9}" required title="5 to 9 characters" class="form-control" id="zip_id"
@@ -167,8 +167,9 @@
         </div>
 
         <div class="form-group">
-            <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary" onclick="search();">Get My Quote!</button>
+            <!-- Submit Button -->  
+            <!-- onclick="search();" belongs below in button tag -->
+            <button type="submit" class="btn btn-primary" onclick="store();">Get My Quote!</button>
             <!-- <input type="button" class="btn btn-primary" value="Get My Quote!" onclick="search();"/> -->
 
             <!--Testing input saved data-->
@@ -180,7 +181,7 @@
 </body>
 
 <footer>
-    <script src="/Javascript/java.js"></script>
+    <script src="/Javascript/profile.js"></script>
 </footer>
 
 </html>
