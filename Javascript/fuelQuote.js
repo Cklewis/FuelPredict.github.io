@@ -1,3 +1,4 @@
+//On gallon & date field click, call function
 function delivered(){
     var x= document.getElementById("delivery_id")
     x.setAttribute("type","text");

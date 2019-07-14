@@ -27,11 +27,11 @@ function delivered(){
 } */
 
 
-
-
 /* document.getElementById("myButton").onclick = function () {
   location.href = "profile.html";
 }; */
+
+
 
 /* var firebaseConfig = {
   apiKey: "api-key",

@@ -14,7 +14,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
         rel="stylesheet" id="bootstrap-css">
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
@@ -109,7 +109,8 @@
         <div class="form-group">
             <label for="date-picker-example">Delivery Date</label>
             <div class='input-group date' id='datepicker'>
-                <input type='text' input placeholder="Selected date" class="form-control" required="required" />
+                <input type="text" 
+                     placeholder="Selected date" class="form-control" required="required" onclick="delivered();"/>
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
                 </span>
