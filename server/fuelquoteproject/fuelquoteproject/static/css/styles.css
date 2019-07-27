@@ -3,13 +3,27 @@ body {
     background: linear-gradient(to right, #0062E6, #33aeff);
   }
 
+#heading{
+color:white;
+font-style: normal;
+font-display: bold;
+}
+
+#main-nav{
+  margin-bottom:0em;
+  padding-bottom:1em;
+  padding-top:1em;
+  margin-top:-2em;
+} 
+
 #showcase {
     position: relative;
     background: url('../images/rocky-mountains-alberta-canada.jpg');
-     min-height: 710px;  
+    min-height: 710px;  
   } 
 
 #showcase .primary-overlay {
+    padding-top:6em;
     background: rgba(129, 76, 79, 0.3);
     position: absolute;
     top: 0;
