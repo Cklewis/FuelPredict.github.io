@@ -1,0 +1,50 @@
+{% load static %}
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top border-bottom" id="main-nav">
+  <div class="container">
+    <a href="/" class="navbar-brand">
+      <div></div>
+      <h3 class="d-inline align-middle">American Fuel Solutions</h3>
+    </a>
+    <button
+      class="navbar-toggler"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    {% if user.is_authenticated %}
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+          role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Hello {{ user.username }}!
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href={% url 'profile' %}>View Profile</a>
+            <a class="dropdown-item" href={% url 'edit' %}>Edit Profile</a>
+            <a class="dropdown-item" href={% url 'get_quote' %}>Get Quote</a>
+            <a class="dropdown-item" href={% url 'quotes' %}>Past Quotes</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href={% url 'logout' %}>Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    {% else %}
+    <div class="collapse navbar-collapse" id="navBarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href={% url 'login' %} class="nav-link">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href={% url 'home' %} class="nav-link">Home</a>
+        </li>
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</nav>
+<!--End Navbar-->

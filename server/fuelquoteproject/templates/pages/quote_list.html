@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content %}
+{% if user.is_authenticated %}
+<section id="quote-list" class="bg-primary">
+  <div class="row">
+    <div class="col-md-10 m-5 mx-auto">
+      <div class="card bg-secondary">
+        <div class="card-body">
+          <table class="table text-light">
+            <thead>
+              <tr>
+                <th scope="col">Date Requested</th>
+                <th scope="col">Delivery Street</th>
+                <th scope="col">Delivery State</th>
+                <th scope="col">Gallons Requested</th>
+                <th scope="col">Price Per Gallon</th>
+                <th scope="col">Discounts</th>
+                <th scope="col">Total Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for object in object_list %}
+              <tr>
+                <td scope="row">{{ object.delivery_date }}</td>
+                <td scope="row">{{ object.delivery_street }}</td>
+                <td scope="row">{{ object.delivery_state }}</td>
+                <td scope="row">{{ object.gallons_requested }}</td>
+                <td scope="row">{{ object.price_per_gallon }}</td>
+                <td scope="row">-${{ object.discounts }}</td>
+                <td scope="row">${{ object.total_amount_due }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% else %}
+<section id="quote-list" class="bg-primary">
+  <div class="row">
+    <div class="col-lg-10 m-5 mx-auto">
+      <div class="col-lg-10 m-5 mx-auto">
+        <div class="card bg-secondary text-center p-4">
+          <p class="lead text-light"><a href="{% url 'login' %}" class="text-light">Please log in here to view your quote history.</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endif %}
+{% endblock content %}
