@@ -1,0 +1,75 @@
+{% extends 'base.html' %} {% block content %} {% if user.is_authenticated %} 
+{% block extrahead %}
+{{ form.media }}
+{% endblock extrahead %}
+{% if user.address1 == None or user.zipcode == None or user.state == None %}
+<section id="get-quote" class="bg-primary">
+  <div class="row">
+    <div class="col-lg-6 text-light m-4 mx-auto">
+      <div class="card bg-secondary text-center card-form p-5">
+        <div class="card-body">
+          <p class="lead"><a class="text-light" href="{% url 'edit' %}">Please click here to 
+            fill out address information before placing an order.</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% else %}
+<section>
+  <div id="get-quote" class="bg-primary">
+    <div class="row">
+      <div class="col-lg-6 text-light my-5 mx-auto">
+        <div class="card bg-secondary text-center card-form p-5">
+          <div class="card-body">
+            <h3>Enter Information for Fuel Quote</h3>
+              {% csrf_token %}
+              {% load crispy_forms_tags %}
+            <form method="POST">
+              {% csrf_token %}
+              <div>
+                <h3>Deliver To:</h3>
+                <p class="display-4">{{ user.full_name }}</p>
+              </div>
+              <div class="form-group">
+                {{ form.gallons_requested | as_crispy_field }}
+              </div>
+              <div class="form-group">
+                {{ form.delivery_street | as_crispy_field }}
+              </div>
+              <div class="form-group">
+                {{ form.delivery_state | as_crispy_field }}
+              </div>
+              <div class="form-group">
+                {{ form.delivery_zipcode | as_crispy_field }}
+              <div class="form-group">
+                {{ form.delivery_date | as_crispy_field }}
+              </div>
+              <input
+                type="submit"
+                value="Submit"
+                class="btn btn-primary"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% else %}
+<section class="bg-primary">
+  <div class="row">
+    <div class="col-lg-6 text-light my-5 mx-auto">
+      <div class="card bg-secondary text-center card-form p-5">
+        <div class="card-body">
+          <h3 class="display-4">Please log in to fill out the quote form.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %} 
+{% endblock content %}

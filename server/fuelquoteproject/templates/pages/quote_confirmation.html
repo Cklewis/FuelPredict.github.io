@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+<section id="quote-confirmation">
+  <div class="row">
+    <div class="col-lg-6 text-light m-4 mx-auto">
+      <div class="card bg-secondary text-center card-form p-5">
+        <div class="card-body text-light">
+          <h2 class="display-4">Confirmation Page</h2>
+          <h2>Total Amount Due: <span class="text-warning">${{obj.total_amount_due}}</span></h2>
+          {% if obj.discounts %}
+          <p class="lead">Total Discounts: -$<span class="text-light">{{obj.discounts}}</span></p>
+          {% endif %}
+          <p class="lead">Deliver to: {{obj.delivery_street}}, {{ obj.delivery_state }} {{obj.delivery_zipcode}} </p>
+          <p class="lead">Price Per Gallon: ${{ obj.price_per_gallon }}</p>
+          <div class="form-group">
+            <form method="POST" name="confirm">
+                {% csrf_token %}
+              <button 
+                class="btn btn-dark btn-outline-light btn-lg btn-block"
+                name="confirm"
+                >Confirm Order</button>
+            </form>
+          </div>
+          <div class="form-group">
+            <form method="POST" name="decline">
+                {% csrf_token %}
+              <button 
+                class="btn btn-danger btn-outline-light btn-lg btn-block"
+                name="delete"
+              >Delete Order</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="bg-primary">
+  <div class="row">
+    <div class="col-lg-6 text-light my-5 mx-auto">
+      <div class="card bg-secondary text-center card-form p-5">
+        <div class="card-body">
+          <h3 class="display-4">Please log in to fill out quote form.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endblock %}

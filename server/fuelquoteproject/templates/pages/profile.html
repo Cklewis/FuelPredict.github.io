@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+<header id="edit-profile" class="bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mt-5 mx-auto">
+        <div class="card bg-dark border-dark text-light">
+          <div class="card-header text-center ">
+            {% if user.is_authenticated %}
+            <h3>{{ user.full_name }}</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <li class="lead mb-2">{{ user.email }}</li>
+              <li class="lead">{{ user.address1 }}</li>
+              <li class="lead">{{ user.city }}</li>
+              <li class="lead">{{ user.state }}</li>
+              <li class="lead">{{ user.zipcode }}</li>
+            </ul>
+            <div class="text-center">
+              <p class="mt-4">
+                <a href="{% url 'edit' %}" class="text-light"
+                  >Click here to edit profile</a
+                >
+              </p>
+            </div>
+
+            {% else %}
+            <p>Please login to edit profile</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock content %}

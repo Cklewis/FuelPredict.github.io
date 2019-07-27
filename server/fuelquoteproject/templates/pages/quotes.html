@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+    <div id="get-quote" class="bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 my-4">
+            <div class="card bg-dark text-light text-center mb-3">
+              <div class="card-body">
+                <h3>Suggested Price</h3>
+                <p class="display-4">$3000.00</p>
+              </div>
+            </div>
+            <div class="card bg-dark text-light mb-3">
+              <div class="card-body">
+                <h2>Deliver to:</h2>
+                <h4>1234 Address Ln</h3>
+                <h4>City, State, Zip</h3>
+              </div>
+            </div>
+
+            <div class="card bg-secondary text-light text-center card-form ">
+              <div class="card-body">
+                <h3>Fuel Quote Form</h3>
+                <p>Fill in information below</p>
+                <form action="">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control form-control"
+                      placeholder="Gallons Requested"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input type="date" class="form-control form-control" />
+                  </div>
+                  <input
+                    type="submit"
+                    value="Submit"
+                    class="btn btn-dark btn-outline-light  btn-lg btn-block"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 my-4">
+            <div class="card bg-secondary">
+              <div class="card-body">
+                <table class="table text-light">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date Requested</th>
+                      <th scope="col">Total Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scrope="row">01/01/1970</td>
+                      <td>$30,000</td>
+                    </tr>
+                    <tr>
+                      <td scrope="row">01/01/1980</td>
+                      <td>$30,000</td>
+                    </tr>
+                    <tr>
+                      <td scrope="row">01/01/1980</td>
+                      <td>$30,000</td>
+                    </tr>
+                    <tr>
+                      <td scrope="row">01/01/1980</td>
+                      <td>$30,000</td>
+                    </tr>
+                    <tr>
+                      <td scrope="row">01/01/1980</td>
+                      <td>$30,000</td>
+                    </tr>
+                    <tr>
+                      <td scrope="row">01/01/1980</td>
+                      <td>$30,000</td>
+                    </tr>
+                    <tr>
+                      <td scrope="row">01/01/1980</td>
+                      <td>$30,000</td>
+                    </tr>
+                    <tr>
+                      <td scrope="row">01/01/1980</td>
+                      <td>$30,000</td>
+                    </tr>
+                    <tr>
+                      <td scrope="row">01/01/1980</td>
+                      <td>$30,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock content %}

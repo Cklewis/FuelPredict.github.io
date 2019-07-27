@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block content %}
+<div id="edit-profile" class="bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-light mt-5 mx-auto">
+        <div class="card bg-secondary text-center card-form ">
+          <div class="card-body">
+            <h3>Edit Profile</h3>
+            <p>Fill in address information below</p>
+            {% load crispy_forms_tags %}
+            <form method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                {{ form.full_name | as_crispy_field }}
+              </div>
+              <div class="form-group">
+                {{ form.email | as_crispy_field }}
+              </div>
+              <div class="form-group">
+                {{ form.address1 | as_crispy_field }}
+              </div>
+              <div class="form-group">
+                {{ form.address2 | as_crispy_field }}
+              </div>
+              <div class="form-group">
+                {{ form.city | as_crispy_field }}
+              </div>
+              <div class="form-group">
+                {{ form.state | as_crispy_field }}
+              </div>
+              <div class="form-group">
+                {{ form.zipcode | as_crispy_field }}
+              </div>
+              <input
+                type="submit"
+                value="Submit"
+                class="btn btn-primary"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
