@@ -3,12 +3,12 @@ body {
     background: linear-gradient(to right, #0062E6, #33aeff);
     background: url('/client/Static/images/solo-vacationR.jpg');
     background-size:cover;
-    margin-bottom:9.5%;
+    margin-bottom:13.2%;
     background-position: center; 
   }
 
   table {
-      margin-top:10%;
+      margin-top:5%;
       
   }
 
@@ -26,4 +26,8 @@ body {
     color: rgb(51, 46, 46);
     margin-bottom: -2%;
   }  
+
+.totalAmt{
+color:white;
+}
   
