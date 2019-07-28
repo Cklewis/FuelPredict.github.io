@@ -1,4 +1,11 @@
-body {
+body{
   background: #007bff;
-  background: linear-gradient(to right, #0062E6, #33aeff);
+  background: linear-gradient(to right, #0062E6, #33aeff); 
+}
+
+#bg-index{
+  margin-top:-3em;
+  background: url('/client/Static/images/folsom-train-ride-1500x609.jpg');
+  min-height: 15em;
+  background-size:cover;
 }
