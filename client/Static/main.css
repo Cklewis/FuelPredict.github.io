@@ -8,4 +8,5 @@ body{
   background: url('/client/Static/images/folsom-train-ride-1500x609.jpg');
   min-height: 15em;
   background-size:cover;
+  padding:-55%
 }
