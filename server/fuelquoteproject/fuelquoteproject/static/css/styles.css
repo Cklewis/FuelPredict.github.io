@@ -18,7 +18,8 @@ font-display: bold;
 
 #showcase {
     position: relative;
-    background: url('../images/rocky-mountains-alberta-canada.jpg');
+    background: url('../images/rocky-mountains.jpg');
+    background-size: 100%;
     min-height: 710px;  
   } 
 
