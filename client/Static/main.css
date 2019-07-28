@@ -6,7 +6,8 @@ body{
 #bg-index{
   margin-top:-3em;
   background: url('../Static/images/folsom-train-ride-1500x609.jpg');
+  background: url('../Static/images/solo-vacation.jpg');
   min-height: 15em;
   background-size:cover;
-  padding:-55%
+  padding:-55%;
 }
