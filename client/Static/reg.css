@@ -29,7 +29,7 @@
     width: 45%;
     /* Link to your background image using in the property below! */
     /* background: scroll center url('https://source.unsplash.com/WEQbe2jBg40/414x512'); */
-    background: scroll center url('/client/Static/images/solo-vacation.jpg'); 
+    background: scroll center url('../Static/images/solo-vacation.jpg'); 
     background-size: cover;
   }
   
