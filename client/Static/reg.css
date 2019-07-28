@@ -8,8 +8,8 @@
     background: linear-gradient(to right, #0062E6, #33aeff);
     background: url('../Static/images/solo-vacationR.jpg');
     background-size:cover;
-    margin-bottom:-0.4%;
     background-position: center; 
+    height: 100vh;
   }
   
   .card-signin {
