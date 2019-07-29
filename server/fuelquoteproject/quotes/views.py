@@ -43,11 +43,11 @@ def get_quote(request):
   if form.is_valid():
     obj = form.save(commit=False) 
     obj.user = request.user
-    fuel_mod_obj = get_object_or_404(FuelQuoteModifier, id=1)
+    fuel_modifier_obj = get_object_or_404(FuelQuoteModifier, id=1)
     date_month = obj.delivery_date.strftime('%B')
-    price_per_gallon = fuel_mod_obj.price_per_gallon
+    price_per_gallon = fuel_modifier_obj.price_per_gallon
     price_per_gallon = float(price_per_gallon)
-    profit_margin = float(fuel_mod_obj.profit_margin)
+    profit_margin = float(fuel_modifier_obj.profit_margin)
 
 
     # Apply Seasonal Fluctuation 

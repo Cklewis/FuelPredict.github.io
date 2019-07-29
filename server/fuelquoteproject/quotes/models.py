@@ -11,6 +11,7 @@ class FuelQuote(models.Model):
     gallons_requested = models.PositiveIntegerField(blank=False)
     delivery_street = models.CharField(max_length=200)
     delivery_street2 = models.CharField(max_length=200, blank=True)
+    delivery_city = models.CharField(max_length=100)
     delivery_state = USStateField()
     delivery_zipcode = USZipCodeField()
     delivery_date = models.DateField(blank=False)

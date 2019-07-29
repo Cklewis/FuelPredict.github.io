@@ -11,6 +11,7 @@ class FuelQuoteModelForm(forms.ModelForm):
     fields= [
       'gallons_requested',
       'delivery_street',
+      'delivery_city',
       'delivery_state',
       'delivery_zipcode',
       'delivery_date',
