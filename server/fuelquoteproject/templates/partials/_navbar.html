@@ -1,7 +1,7 @@
 {% load static %}
 
 <!--Navbar-->
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark" id="main-nav">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark border-bottom" id="main-nav">
   <div class="container">
     <a href="/" class="navbar-brand">
       <div></div>
@@ -24,11 +24,13 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href={% url 'profile' %}>View Profile</a>
-            <a class="dropdown-item" href={% url 'edit' %}>Edit Profile</a>
+            <a class="dropdown-item" href={% url 'edit' %}>Edit Profile<i class='fas fa-edit' 
+              style='padding:0.2em'></i></a>
             <a class="dropdown-item" href={% url 'get_quote' %}>Get Quote</a>
             <a class="dropdown-item" href={% url 'quotes' %}>Past Quotes</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href={% url 'logout' %}>Logout</a>
+            <a class="dropdown-item" href={% url 'logout' %}>Logout<i class='fas fa-sign-out-alt' 
+              style='padding:0.2em'></i></a>
           </div>
         </li>
       </ul>

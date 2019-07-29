@@ -11,8 +11,7 @@
           {% if obj.discounts %}
           <p class="lead">Total Discounts: -$<span class="text-light">{{obj.discounts}}</span></p>
           {% endif %}
-          <p class="lead">Deliver to: {{obj.delivery_street}} {{obj.delivery_city}}, 
-            {{ obj.delivery_state }} {{obj.delivery_zipcode}} </p>
+          <p class="lead">Deliver to: {{obj.delivery_street}}, {{ obj.delivery_state }} {{obj.delivery_zipcode}} </p>
           <p class="lead">Price Per Gallon: ${{ obj.price_per_gallon }}</p>
           <div class="form-group">
             <form method="POST" name="confirm">

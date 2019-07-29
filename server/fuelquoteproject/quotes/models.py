@@ -11,7 +11,6 @@ class FuelQuote(models.Model):
     gallons_requested = models.PositiveIntegerField(blank=False)
     delivery_street = models.CharField(max_length=200)
     delivery_street2 = models.CharField(max_length=200, blank=True)
-    delivery_city = models.CharField(max_length=100)
     delivery_state = USStateField()
     delivery_zipcode = USZipCodeField()
     delivery_date = models.DateField(blank=False)
@@ -23,4 +22,4 @@ class FuelQuote(models.Model):
 class FuelQuoteModifier(models.Model):
     price_per_gallon = models.DecimalField(max_digits=10, decimal_places=2)
     summer_modifier = models.DecimalField(max_digits=10, decimal_places=2)
-    profit_margin = models.DecimalField(max_digits=5, decimal_places=3)
+    profit_margin = models.DecimalField(max_digits=5, decimal_places=2)
