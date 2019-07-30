@@ -52,7 +52,7 @@ def get_quote(request):
 
     # Apply Seasonal Fluctuation 
     if date_month in {'March', 'April', 'May', 'June', 'July', 'August'}:
-      summer_modifier = float(fuel_mod_obj.summer_modifier)
+      summer_modifier = float(fuel_modifier_obj.summer_modifier)
       price_per_gallon = price_per_gallon * (1 + summer_modifier)
     
     quotes_list = FuelQuote.objects.filter(user=request.user)
@@ -75,8 +75,8 @@ def get_quote(request):
       price_per_gallon = price_per_gallon + 0.90
 
     # Calculate Total Amount Due
-    price_per_gallon = price_per_gallon * (1 + profit_margin)
-    obj.total_amount_due = (obj.gallons_requested * price_per_gallon) * (1 + profit_margin)
+    price_per_gallon = price_per_gallon + profit_margin
+    obj.total_amount_due = obj.gallons_requested * price_per_gallon
     obj.price_per_gallon = price_per_gallon
 
     #Calculate Total Discounts
