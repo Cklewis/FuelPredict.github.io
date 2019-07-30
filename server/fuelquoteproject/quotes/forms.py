@@ -16,5 +16,5 @@ class FuelQuoteModelForm(forms.ModelForm):
       'delivery_date',
     ]
     widgets = {
-    'delivery_date': DatePickerInput(format='%m-%d-%Y'),
+    'delivery_date': DatePickerInput(format='%m/%d/%Y'),
     }
