@@ -3,8 +3,8 @@ body {
     background: linear-gradient(to right, #0062E6, #33aeff);
   }
 
-#heading{
-  color: white;
+#amsf{
+  color:black;
   font-style: normal;
   font-display: bold;
 }
@@ -51,4 +51,3 @@ body {
   #scroll {
     padding-top: 1000px;
   }
-
