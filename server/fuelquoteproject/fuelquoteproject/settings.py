@@ -86,11 +86,8 @@ WSGI_APPLICATION = 'fuelquoteproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'afsdb',
-        'USER':'postgres',
-        'PASSWORD':'justin0713',
-        'HOST':'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
