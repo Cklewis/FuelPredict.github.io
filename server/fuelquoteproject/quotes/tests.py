@@ -29,7 +29,7 @@ class TestQuoteForm(TestCase):
     user_pk = CustomUser.objects.get(pk=1).pk
     form = FuelQuoteModelForm(data={
       'user': user_pk,
-      'delivery_date': "2019-10-10",
+      'delivery_date': "10/10/2019",
       'gallons_requested': 150,
       'delivery_state': "Texas",
       'delivery_street': "1234 Test Terrace",

@@ -75,8 +75,8 @@ def get_quote(request):
       price_per_gallon = price_per_gallon + 0.90
 
     # Calculate Total Amount Due
-    price_per_gallon = price_per_gallon + profit_margin
-    obj.total_amount_due = obj.gallons_requested * price_per_gallon
+    price_per_gallon = price_per_gallon * (1 + profit_margin)
+    obj.total_amount_due = (obj.gallons_requested * price_per_gallon) * (1 + profit_margin)
     obj.price_per_gallon = price_per_gallon
 
     #Calculate Total Discounts
