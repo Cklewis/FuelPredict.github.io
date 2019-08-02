@@ -4,7 +4,7 @@
 <section id="quote-confirmation">
   <div class="row">
     <div class="col-lg-6 text-light m-4 mx-auto">
-      <div class="card bg-secondary text-center card-form p-5">
+      <div class="card bg-info text-center card-form p-5">
         <div class="card-body text-light">
           <h2 class="display-4">Confirmation Page</h2>
           <h2>Total Amount Due: <span class="text-warning">${{obj.total_amount_due}}</span></h2>
@@ -17,7 +17,7 @@
             <form method="POST" name="confirm">
                 {% csrf_token %}
               <button 
-                class="btn btn-dark btn-outline-light btn-lg btn-block"
+                class="btn btn-dark btn-outline-dark btn-lg btn-block"
                 name="confirm"
                 >Confirm Order</button>
             </form>
@@ -26,7 +26,7 @@
             <form method="POST" name="decline">
                 {% csrf_token %}
               <button 
-                class="btn btn-danger btn-outline-light btn-lg btn-block"
+                class="btn btn-danger btn-outline-danger btn-lg btn-block"
                 name="delete"
               >Delete Order</button>
             </form>
@@ -40,7 +40,7 @@
 <section class="bg-primary">
   <div class="row">
     <div class="col-lg-6 text-light my-5 mx-auto">
-      <div class="card bg-secondary text-center card-form p-5">
+      <div class="card bg-info text-center card-form p-5">
         <div class="card-body">
           <h3 class="display-4">Please log in to fill out quote form.</h3>
         </div>

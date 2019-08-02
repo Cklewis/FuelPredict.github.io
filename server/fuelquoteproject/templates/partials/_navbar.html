@@ -24,8 +24,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href={% url 'profile' %}>View Profile</a>
-            <a class="dropdown-item" href={% url 'edit' %}>Edit Profile<i class='fas fa-edit' 
-              style='padding:0.3em'></i></a>
+            <a class="dropdown-item" href={% url 'edit' %}> <i class='fas fa-edit' 
+              style='padding:0.3em'></i>Edit Profile</a>
             <a class="dropdown-item" href={% url 'get_quote' %}>Get Quote</a>
             <a class="dropdown-item" href={% url 'quotes' %}>Past Quotes</a>
             <div class="dropdown-divider"></div>
@@ -39,7 +39,8 @@
     <div class="collapse navbar-collapse" id="navBarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a href={% url 'login' %} class="nav-link">Login <i class='fas fa-sign-in-alt'></i></a>
+          <a href={% url 'login' %} class="nav-link"><i class='fas fa-sign-in-alt' 
+            style='padding:0.3em'></i>Login</a>
         </li>
         <li class="nav-item">
           <a href={% url 'home' %} class="nav-link">Home</a>
