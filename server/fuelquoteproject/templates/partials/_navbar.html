@@ -22,11 +22,13 @@
             Hello {{ user.username }}!
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href={% url 'profile' %}>View Profile</a>
+            <a class="dropdown-item" href={% url 'profile' %}><i class='fas fa-user' 
+              style='padding:0.2em'></i>View Profile</a>
             <a class="dropdown-item" href={% url 'edit' %}> <i class='fas fa-edit' 
               style='padding:0.2em'></i>Edit Profile</a>
             <a class="dropdown-item" href={% url 'get_quote' %}>Get Quote</a>
-            <a class="dropdown-item" href={% url 'quotes' %}>Past Quotes</a>
+            <a class="dropdown-item" href={% url 'quotes' %}><i class='far fa-list-alt' 
+              style='padding:0.2em'></i>Past Quotes</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href={% url 'logout' %}><i class='fas fa-sign-out-alt' 
               style='padding:0.2em'></i>Logout</a>
