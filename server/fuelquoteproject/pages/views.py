@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 
 # Create your views here.
 
-def home(request):
+def index(request):
     form = CustomUserCreationForm(request.POST or None)
     context = {
       "form": form
@@ -15,4 +15,4 @@ def home(request):
     if form.is_valid():
       form.save()
       form = CustomUserCreationForm()
-    return render(request, 'pages/home.html', context)
+    return render(request, 'pages/index.html', context)
